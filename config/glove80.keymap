@@ -82,7 +82,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
+        layer_base {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
@@ -101,7 +101,7 @@
             >;
         };
 
-        lower_layer {
+        layer_lower {
             bindings = <
 &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
 &trans        &none         &none       &none       &none      &kp HOME                                                        &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
@@ -112,7 +112,7 @@
             >;
         };
 
-        magic_layer {
+        layer_magic {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
 &none        &none            &none            &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
@@ -123,7 +123,7 @@
             >;
         };
 
-        factory_test_layer {
+        layer_factory_test {
             bindings = <
 &kp N0  &kp N6  &kp N2  &kp N8  &kp N4                                                                  &kp N4  &kp N8  &kp N2  &kp N6  &kp N0
 &kp N1  &kp N7  &kp N3  &kp N9  &kp N5  &kp N0                                                  &kp N0  &kp N5  &kp N9  &kp N3  &kp N7  &kp N1
