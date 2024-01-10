@@ -136,12 +136,12 @@
 
         layer_symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans   &trans                &trans                                                                                                              &trans        &trans         &trans            &trans         &trans
+&kp GRAVE  &kp F1  &kp F2   &kp F3                &kp F4                 &kp F5                                                                       &kp F6          &kp F7        &kp F8         &kp F9            &trans         &kp UNDERSCORE
+&trans     &trans  &trans   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL                                                                      &kp UNDERSCORE  &kp PLUS      &trans         &trans            &none          &kp PIPE
+&trans     &trans  &trans   &kp LBKT              &kp RBKT               &kp TAB                                                                      &kp MINUS       &kp EQUAL     &trans         &trans            &kp SEMI       &kp DOUBLE_QUOTES
+&trans     &trans  &trans   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp V    &trans  &trans  &trans  &kp RG(SPACE)  &kp LA(LBKT)  &kp LA(RBKT)   &kp BSPC        &none         &kp LESS_THAN  &kp GREATER_THAN  &kp RS(FSLH)   &kp LG(LA(RIGHT))
+&trans     &trans  &kp F10  &kp F11               &kp F12                         &trans  &trans  &trans  &kp TAB        &kp LA(RET)   &kp LG(SPACE)                  &kp RA(LEFT)  &trans         &trans            &kp RA(RIGHT)  &kp LG(LA(LEFT))
             >;
         };
     };
