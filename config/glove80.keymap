@@ -29,7 +29,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo LOWER>, <&to LOWER>;
+            bindings = <&mo 1>, <&to 1>;
         };
 
         magic: magic_hold_tap {
@@ -92,23 +92,34 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1          &kp F2    &kp F3   &kp F4            &kp F5                                                                                                  &kp F6    &kp F7     &kp F8        &kp F9     &kp F10
-&kp GRAVE       &kp N1    &kp N2   &kp N3            &kp N4             &kp N5                                                                       &kp N6  &kp N7    &kp N8     &kp N9        &kp N0     &kp MINUS
-&kp TAB         &kp Q     &kp W    &kp E             &kp R              &kp T                                                                        &kp Y   &kp U     &kp I      &kp O         &kp P      &kp BSLH
-&kp ESC         &kp A     &kp S    &kp D             &kp F              &kp G                                                                        &kp H   &kp J     &kp K      &kp L         &kp SEMI   &kp SQT
-&kp EQUAL       &kp Z     &kp X    &kp C             &kp V              &kp B   &kp LSHFT  &kp LALT       &layer_td  &kp LCTRL  &kp RALT  &kp RSHFT  &kp N   &kp M     &kp COMMA  &kp DOT       &kp FSLH   &kp PG_UP
-&magic MAGIC 0  &kp HOME  &kp END  &kp LEFT_BRACKET  &kp RIGHT_BRACKET          &mo 4      &kp BACKSPACE  &kp LGUI   &kp RGUI   &kp RET   &kp SPACE          &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp PG_DN
+&kp F1      &kp F2    &kp F3   &kp F4            &kp F5                                                                                                  &kp F6    &kp F7     &kp F8        &kp F9     &kp F10
+&kp GRAVE   &kp N1    &kp N2   &kp N3            &kp N4             &kp N5                                                                       &kp N6  &kp N7    &kp N8     &kp N9        &kp N0     &kp MINUS
+&kp TAB     &kp Q     &kp W    &kp E             &kp R              &kp T                                                                        &kp Y   &kp U     &kp I      &kp O         &kp P      &kp BSLH
+&kp ESC     &kp A     &kp S    &kp D             &kp F              &kp G                                                                        &kp H   &kp J     &kp K      &kp L         &kp SEMI   &kp SQT
+&kp EQUAL   &kp Z     &kp X    &kp C             &kp V              &kp B   &kp LSHFT  &kp LALT       &layer_td  &kp LCTRL  &kp RALT  &kp RSHFT  &kp N   &kp M     &kp COMMA  &kp DOT       &kp FSLH   &kp PG_UP
+&magic 3 0  &kp HOME  &kp END  &kp LEFT_BRACKET  &kp RIGHT_BRACKET          &mo 2      &kp BACKSPACE  &kp LGUI   &kp RGUI   &kp RET   &kp SPACE          &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp PG_DN
             >;
         };
 
         layer_lower {
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
-&trans        &none         &none       &none       &none      &kp HOME                                                        &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
-&trans        &none         &none       &kp UP      &none      &kp END                                                         &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
-&trans        &none         &kp LEFT    &kp DOWN    &kp RIGHT  &kp PG_UP                                                       &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
-&trans        &kp K_CMENU   &none       &kp F11     &kp F12    &kp PG_DN  &trans  &trans  &to DEFAULT  &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans        &kp CAPS      &kp INS     &kp F11     &kp F12               &trans  &trans  &trans       &trans  &trans  &trans             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                         &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
+&trans        &none         &none       &none       &none      &kp HOME                                                   &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
+&trans        &none         &none       &kp UP      &none      &kp END                                                    &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
+&trans        &none         &kp LEFT    &kp DOWN    &kp RIGHT  &kp PG_UP                                                  &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
+&trans        &kp K_CMENU   &none       &kp F11     &kp F12    &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans        &kp CAPS      &kp INS     &kp F11     &kp F12               &trans  &trans  &trans  &trans  &trans  &trans             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+            >;
+        };
+
+        layer_symbol {
+            bindings = <
+&trans     &trans  &trans     &trans                &trans                                                                                                                        &trans        &trans         &trans            &trans         &trans
+&kp GRAVE  &kp F1  &kp F2     &kp F3                &kp F4                 &kp F5                                                                                 &kp F6          &kp F7        &kp F8         &kp F9            &trans         &kp UNDERSCORE
+&trans     &trans  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL                                                                                &kp UNDERSCORE  &kp PLUS      &trans         &trans            &none          &kp PIPE
+&trans     &trans  &trans     &kp LBKT              &kp RBKT               &kp TAB                                                                                &kp MINUS       &kp EQUAL     &trans         &trans            &kp SEMI       &kp DOUBLE_QUOTES
+&trans     &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LS(LA(LG(V)))  &trans  &trans  &trans  &kp RG(SPACE)  &kp LA(LBKT)  &kp LA(RBKT)   &kp BSPC        &none         &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION   &kp LG(LA(RIGHT))
+&trans     &trans  &kp F10    &kp F11               &kp F12                                   &trans  &trans  &trans  &kp TAB        &kp LA(RET)   &kp LG(SPACE)                  &kp RA(LEFT)  &trans         &trans            &kp RA(RIGHT)  &kp LG(LA(LEFT))
             >;
         };
 
@@ -119,7 +130,7 @@
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to FACTORY_TEST
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 4
             >;
         };
 
@@ -131,17 +142,6 @@
 &kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                  &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
 &kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6  &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
 &kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9  &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
-            >;
-        };
-
-        layer_symbol {
-            bindings = <
-&trans     &trans  &trans   &trans                &trans                                                                                                              &trans        &trans         &trans            &trans         &trans
-&kp GRAVE  &kp F1  &kp F2   &kp F3                &kp F4                 &kp F5                                                                       &kp F6          &kp F7        &kp F8         &kp F9            &trans         &kp UNDERSCORE
-&trans     &trans  &trans   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL                                                                      &kp UNDERSCORE  &kp PLUS      &trans         &trans            &none          &kp PIPE
-&trans     &trans  &trans   &kp LBKT              &kp RBKT               &kp TAB                                                                      &kp MINUS       &kp EQUAL     &trans         &trans            &kp SEMI       &kp DOUBLE_QUOTES
-&trans     &trans  &trans   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp V    &trans  &trans  &trans  &kp RG(SPACE)  &kp LA(LBKT)  &kp LA(RBKT)   &kp BSPC        &none         &kp LESS_THAN  &kp GREATER_THAN  &kp RS(FSLH)   &kp LG(LA(RIGHT))
-&trans     &trans  &kp F10  &kp F11               &kp F12                         &trans  &trans  &trans  &kp TAB        &kp LA(RET)   &kp LG(SPACE)                  &kp RA(LEFT)  &trans         &trans            &kp RA(RIGHT)  &kp LG(LA(LEFT))
             >;
         };
     };
