@@ -172,5 +172,16 @@
 &kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9  &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
             >;
         };
+
+        cursor {
+            bindings = <
+&none          &none          &none              &none      &none                                                                                                        &none          &none          &none          &none          &none
+&none          &none          &none              &none      &kp DELETE     &kp INSERT                                                                        &kp INSERT  &kp DELETE     &none          &none          &none          &none
+&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))      &kp LG(Z)  &kp BACKSPACE  &kp LG(X)                                                                         &kp RG(X)   &kp BACKSPACE  &kp RG(Z)      &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
+&kp LG(L)      &kp LGUI       &kp LALT           &kp LCTRL  &kp LSHFT      &kp LG(C)                                                                         &kp RG(C)   &kp LEFT       &kp UP_ARROW   &kp DOWN       &kp RIGHT      &kp RG(L)
+&kp LG(J)      &kp LG(F)      &kp LS(LA(RIGHT))  &none      &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &none      &none  &none              &kp RG(V)   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN  &kp END        &kp J
+&kp LA(LG(F))  &kp LG(LS(G))  &none              &none      &kp LG(G)                  &none              &none  &to 0  &kp RG(A)  &none  &kp RS(RA(RIGHT))              &kp RG(F)      &kp RG(RS(G))  &kp RG(G)      &kp RA(RG(F))  &kp RC(RG(SPACE))
+            >;
+        };
     };
 };
