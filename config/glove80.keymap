@@ -115,6 +115,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        extend_word: extend_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_WORD";
+            bindings = <&extend_word_right>, <&extend_word_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        extend_line: extend_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_LINE";
+            bindings = <&extend_line_right>, <&extend_line_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -188,6 +206,51 @@
             wait-ms = <1>;
             tap-ms = <1>;
         };
+
+        extend_word_right: extend_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(RIGHT))>;
+            label = "EXTEND_WORD_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        extend_word_left: extend_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LEFT))>;
+            label = "EXTEND_WORD_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        extend_line_right: extend_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DOWN) &kp LS(END)>;
+            label = "EXTEND_LINE_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        extend_line_left: extend_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(UP) &kp LS(HOME)>;
+            label = "EXTEND_LINE_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_none: select_none {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN &kp UP &kp LEFT &kp RIGHT>;
+            label = "SELECT_NONE";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
     };
 
     keymap {
@@ -258,12 +321,12 @@
 
         cursor {
             bindings = <
-&none          &none          &none          &none         &none                                                                                                          &none          &none          &none          &none          &none
-&none          &none          &none          &none         &kp DELETE     &kp INSERT                                                                          &kp INSERT  &kp DELETE     &none          &none          &none          &none
-&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                           &kp RG(X)   &kp BACKSPACE  &kp RG(Z)      &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
-&kp LG(L)      &kp LGUI       &kp LALT       &kp LCTRL     &kp LSHFT      &kp LG(C)                                                                           &kp RG(C)   &kp LEFT       &kp UP_ARROW   &kp DOWN       &kp RIGHT      &kp RG(L)
-&kp LG(J)      &kp LG(F)      &select_word   &select_line  &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &none      &none         &none         &kp RG(V)   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN  &kp END        &kp J
-&kp LA(LG(F))  &kp LG(LS(G))  &none          &none         &kp LG(G)                  &none              &none  &to 0  &kp RG(A)  &select_line  &select_word              &kp RG(F)      &kp RG(RS(G))  &kp RG(G)      &kp RA(RG(F))  &kp RC(RG(SPACE))
+&none          &none          &none          &none         &none                                                                                                             &none          &none          &none          &none          &none
+&none          &none          &none          &none         &kp DELETE     &kp INSERT                                                                             &kp INSERT  &kp DELETE     &none          &none          &none          &none
+&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                              &kp RG(X)   &kp BACKSPACE  &kp RG(Z)      &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
+&kp LG(L)      &kp LGUI       &kp LALT       &kp LCTRL     &kp LSHFT      &kp LG(C)                                                                              &kp RG(C)   &kp LEFT       &kp UP_ARROW   &kp DOWN       &kp RIGHT      &kp RG(L)
+&kp LG(J)      &kp LG(F)      &select_word   &select_line  &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &select_none  &extend_line  &extend_word  &kp RG(V)   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN  &kp END        &kp J
+&kp LA(LG(F))  &kp LG(LS(G))  &extend_word   &extend_line  &kp LG(G)                  &none              &none  &to 0  &kp RG(A)     &select_line  &select_word              &kp RG(F)      &kp RG(RS(G))  &kp RG(G)      &kp RA(RG(F))  &kp RC(RG(SPACE))
             >;
         };
     };
