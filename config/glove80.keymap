@@ -106,6 +106,15 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_LINE";
+            bindings = <&select_line_right>, <&select_line_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -158,6 +167,24 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LEFT_ARROW) &kp LA(RIGHT) &kp LA(LS(LEFT))>;
             label = "SELECT_WORD_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_line_right: select_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SELECT_LINE_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_line_left: select_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(HOME)>;
+            label = "SELECT_LINE_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -231,12 +258,12 @@
 
         cursor {
             bindings = <
-&none          &none          &none          &none      &none                                                                                                   &none          &none          &none          &none          &none
-&none          &none          &none          &none      &kp DELETE     &kp INSERT                                                                   &kp INSERT  &kp DELETE     &none          &none          &none          &none
-&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)  &kp BACKSPACE  &kp LG(X)                                                                    &kp RG(X)   &kp BACKSPACE  &kp RG(Z)      &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
-&kp LG(L)      &kp LGUI       &kp LALT       &kp LCTRL  &kp LSHFT      &kp LG(C)                                                                    &kp RG(C)   &kp LEFT       &kp UP_ARROW   &kp DOWN       &kp RIGHT      &kp RG(L)
-&kp LG(J)      &kp LG(F)      &select_word   &none      &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &none      &none  &none         &kp RG(V)   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN  &kp END        &kp J
-&kp LA(LG(F))  &kp LG(LS(G))  &none          &none      &kp LG(G)                  &none              &none  &to 0  &kp RG(A)  &none  &select_word              &kp RG(F)      &kp RG(RS(G))  &kp RG(G)      &kp RA(RG(F))  &kp RC(RG(SPACE))
+&none          &none          &none          &none         &none                                                                                                          &none          &none          &none          &none          &none
+&none          &none          &none          &none         &kp DELETE     &kp INSERT                                                                          &kp INSERT  &kp DELETE     &none          &none          &none          &none
+&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                           &kp RG(X)   &kp BACKSPACE  &kp RG(Z)      &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
+&kp LG(L)      &kp LGUI       &kp LALT       &kp LCTRL     &kp LSHFT      &kp LG(C)                                                                           &kp RG(C)   &kp LEFT       &kp UP_ARROW   &kp DOWN       &kp RIGHT      &kp RG(L)
+&kp LG(J)      &kp LG(F)      &select_word   &select_line  &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &none      &none         &none         &kp RG(V)   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN  &kp END        &kp J
+&kp LA(LG(F))  &kp LG(LS(G))  &none          &none         &kp LG(G)                  &none              &none  &to 0  &kp RG(A)  &select_line  &select_word              &kp RG(F)      &kp RG(RS(G))  &kp RG(G)      &kp RA(RG(F))  &kp RC(RG(SPACE))
             >;
         };
     };
