@@ -97,6 +97,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_WORD";
+            #binding-cells = <0>;
+            bindings = <&select_word_right>, <&select_word_left>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -133,6 +142,24 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
+        };
+
+        select_word_right: select_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(LEFT) &kp LA(LS(RIGHT))>;
+            label = "SELECT_WORD_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_word_left: select_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_ARROW) &kp LA(RIGHT) &kp LA(LS(LEFT))>;
+            label = "SELECT_WORD_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
     };
 
@@ -204,12 +231,12 @@
 
         cursor {
             bindings = <
-&none          &none          &none              &none      &none                                                                                                        &none          &none          &none          &none          &none
-&none          &none          &none              &none      &kp DELETE     &kp INSERT                                                                        &kp INSERT  &kp DELETE     &none          &none          &none          &none
-&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))      &kp LG(Z)  &kp BACKSPACE  &kp LG(X)                                                                         &kp RG(X)   &kp BACKSPACE  &kp RG(Z)      &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
-&kp LG(L)      &kp LGUI       &kp LALT           &kp LCTRL  &kp LSHFT      &kp LG(C)                                                                         &kp RG(C)   &kp LEFT       &kp UP_ARROW   &kp DOWN       &kp RIGHT      &kp RG(L)
-&kp LG(J)      &kp LG(F)      &kp LS(LA(RIGHT))  &none      &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &none      &none  &none              &kp RG(V)   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN  &kp END        &kp J
-&kp LA(LG(F))  &kp LG(LS(G))  &none              &none      &kp LG(G)                  &none              &none  &to 0  &kp RG(A)  &none  &kp RS(RA(RIGHT))              &kp RG(F)      &kp RG(RS(G))  &kp RG(G)      &kp RA(RG(F))  &kp RC(RG(SPACE))
+&none          &none          &none          &none      &none                                                                                                   &none          &none          &none          &none          &none
+&none          &none          &none          &none      &kp DELETE     &kp INSERT                                                                   &kp INSERT  &kp DELETE     &none          &none          &none          &none
+&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)  &kp BACKSPACE  &kp LG(X)                                                                    &kp RG(X)   &kp BACKSPACE  &kp RG(Z)      &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
+&kp LG(L)      &kp LGUI       &kp LALT       &kp LCTRL  &kp LSHFT      &kp LG(C)                                                                    &kp RG(C)   &kp LEFT       &kp UP_ARROW   &kp DOWN       &kp RIGHT      &kp RG(L)
+&kp LG(J)      &kp LG(F)      &select_word   &none      &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &none      &none  &none         &kp RG(V)   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN  &kp END        &kp J
+&kp LA(LG(F))  &kp LG(LS(G))  &none          &none      &kp LG(G)                  &none              &none  &to 0  &kp RG(A)  &none  &select_word              &kp RG(F)      &kp RG(RS(G))  &kp RG(G)      &kp RA(RG(F))  &kp RC(RG(SPACE))
             >;
         };
     };
