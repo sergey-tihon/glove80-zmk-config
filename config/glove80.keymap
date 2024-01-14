@@ -266,12 +266,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2        &kp F3       &kp F4         &kp F5                                                                                                                           &kp F6        &kp F7            &kp F8             &kp F9                &kp F10
-&kp EQUAL   &kp N1        &kp N2       &kp N3         &kp N4        &kp N5                                                                                            &kp N6           &kp N7        &kp N8            &kp N9             &kp N0                &kp MINUS
-&kp GRAVE   &kp Q         &kp W        &kp E          &kp R         &kp T                                                                                             &kp Y            &kp U         &kp I             &kp O              &kp P                 &kp BSLH
-&kp CAPS    &hml LCTRL A  &hmr LALT S  &hml LGUI D    &hml LSHFT F  &kp G                                                                                             &hmr RC(RALT) H  &hmr RSHFT J  &hmr RGUI K       &hmr RALT L        &hmr RCTRL SEMICOLON  &kp SQT
-&kp LSHFT   &kp Z         &kp X        &kp C          &kp V         &kp B   &kp ESCAPE       &thumb 6 UP_ARROW  &kp DOWN   &kp LEFT_ARROW  &kp RIGHT  &kp ENTER       &kp N            &kp M         &kp COMMA         &kp DOT            &kp FSLH              &kp RSHFT
-&magic 3 0  &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END               &thumb 5 DELETE  &kp BACKSPACE      &layer_td  &layer_td       &kp TAB    &thumb 2 SPACE                   &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right         &magic 3 0
+&kp F1      &kp F2       &kp F3       &kp F4         &kp F5                                                                                                                           &kp F6        &kp F7            &kp F8             &kp F9               &kp F10
+&kp EQUAL   &kp N1       &kp N2       &kp N3         &kp N4        &kp N5                                                                                            &kp N6           &kp N7        &kp N8            &kp N9             &kp N0               &kp MINUS
+&kp GRAVE   &kp Q        &kp W        &kp E          &kp R         &kp T                                                                                             &kp Y            &kp U         &kp I             &kp O              &kp P                &kp BSLH
+&kp CAPS    &hml LGUI A  &hmr LALT S  &hml LCTRL D   &hml LSHFT F  &kp G                                                                                             &hmr RC(RALT) H  &hmr RSHFT J  &hmr RCTRL K      &hmr RALT L        &hmr RGUI SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z        &kp X        &kp C          &kp V         &kp B   &kp ESCAPE       &thumb 6 UP_ARROW  &kp DOWN   &kp LEFT_ARROW  &kp RIGHT  &kp ENTER       &kp N            &kp M         &kp COMMA         &kp DOT            &kp FSLH             &kp RSHFT
+&magic 3 0  &kp HOME     &kp PAGE_UP  &kp PAGE_DOWN  &kp END               &thumb 5 DELETE  &kp BACKSPACE      &layer_td  &layer_td       &kp TAB    &thumb 2 SPACE                   &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right        &magic 3 0
             >;
         };
 
@@ -338,6 +338,17 @@
 &kp KP_NUMLOCK  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none                                                                   &kp PLUS      &kp N4        &kp N5            &kp N6             &kp MINUS        &kp J
 &none           &none     &none     &none      &none       &none  &none  &none  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1        &kp N2            &kp N3             &kp FSLH         &kp RS(G)
 &none           &none     &none     &none      &none              &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right    &kp AT_SIGN
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
