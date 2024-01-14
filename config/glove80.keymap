@@ -164,19 +164,19 @@
 &trans        &none         &none       &none       &none      &kp HOME                                                   &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
 &trans        &none         &none       &kp UP      &none      &kp END                                                    &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
 &trans        &none         &kp LEFT    &kp DOWN    &kp RIGHT  &kp PG_UP                                                  &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
-&trans        &kp K_CMENU   &none       &kp F11     &kp F12    &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans        &kp CAPS      &kp INS     &kp F11     &kp F12               &trans  &trans  &trans  &trans  &trans  &trans             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+&trans        &kp K_CMENU   &kp F10     &kp F11     &kp F12    &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans        &kp CAPS      &kp F10     &kp F11     &kp F12               &tog 5  &trans  &trans  &trans  &trans  &tog 2             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
             >;
         };
 
         symbol {
             bindings = <
-&trans     &trans  &trans     &trans                &trans                                                                                                                        &trans        &trans         &trans            &trans         &trans
-&kp GRAVE  &kp F1  &kp F2     &kp F3                &kp F4                 &kp F5                                                                                 &kp F6          &kp F7        &kp F8         &kp F9            &trans         &kp UNDERSCORE
-&trans     &trans  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL                                                                                &kp UNDERSCORE  &kp PLUS      &trans         &trans            &none          &kp PIPE
-&trans     &trans  &trans     &kp LBKT              &kp RBKT               &kp TAB                                                                                &kp MINUS       &kp EQUAL     &trans         &trans            &kp SEMI       &kp DOUBLE_QUOTES
-&trans     &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LS(LA(LG(V)))  &trans  &trans  &trans  &kp RG(SPACE)  &kp LA(LBKT)  &kp LA(RBKT)   &kp BSPC        &none         &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION   &kp LG(LA(RIGHT))
-&trans     &trans  &kp F10    &kp F11               &kp F12                                   &trans  &trans  &trans  &kp TAB        &kp LA(RET)   &kp LG(SPACE)                  &kp RA(LEFT)  &trans         &trans            &kp RA(RIGHT)  &kp LG(LA(LEFT))
+&trans           &trans         &trans                &trans                 &trans                                                                                                                            &trans        &trans            &trans             &trans         &trans
+&none            &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                                       &kp F6          &kp F7        &kp F8            &kp F9             &trans         &kp UNDERSCORE
+&kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                                                    &kp UNDERSCORE  &kp PLUS      &trans            &trans             &none          &kp PIPE
+&kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                                                    &kp MINUS       &kp EQUAL     &trans            &trans             &kp SEMI       &kp DOUBLE_QUOTES
+&kp TILDE        &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &kp RG(SPACE)  &kp LA(LBKT)  &kp LA(RBKT)   &kp BSPC        &none         &kp LESS_THAN     &none              &none          &none
+&kp AT           &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &to 0          &kp LA(RET)   &kp LG(SPACE)                  &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right  &none
             >;
         };
 
