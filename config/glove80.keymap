@@ -79,6 +79,24 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
         };
+
+        parang_right: parang_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARANG_RIGHT";
+            bindings = <&kp RPAR>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        parang_left: parang_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARANG_LEFT";
+            bindings = <&kp LPAR>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -133,10 +151,10 @@
             bindings = <
 &kp F1      &kp F2        &kp F3       &kp F4         &kp F5                                                                                                                         &kp F6        &kp F7            &kp F8             &kp F9                &kp F10
 &kp EQUAL   &kp N1        &kp N2       &kp N3         &kp N4        &kp N5                                                                                          &kp N6           &kp N7        &kp N8            &kp N9             &kp N0                &kp MINUS
-&kp TAB     &kp Q         &kp W        &kp E          &kp R         &kp T                                                                                           &kp Y            &kp U         &kp I             &kp O              &kp P                 &kp BSLH
-&kp ESC     &hml LCTRL A  &hmr LALT S  &hml LGUI D    &hml LSHFT F  &kp G                                                                                           &hmr RC(RALT) H  &hmr RSHFT J  &hmr RGUI K       &hmr RALT L        &hmr RCTRL SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z         &kp X        &kp C          &kp V         &kp B   &kp ESCAPE          &kp UP_ARROW  &kp DOWN   &kp LEFT_ARROW  &kp RIGHT  &kp ENTER       &kp N            &kp M         &kp COMMA         &kp DOT            &kp FSLH              &kp PG_UP
-&magic 3 0  &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END               &thumb 5 BACKSPACE  &kp DELETE    &layer_td  &layer_td       &kp TAB    &thumb 2 SPACE                   &kp LEFT      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT             &kp PG_DN
+&kp GRAVE   &kp Q         &kp W        &kp E          &kp R         &kp T                                                                                           &kp Y            &kp U         &kp I             &kp O              &kp P                 &kp BSLH
+&kp CAPS    &hml LCTRL A  &hmr LALT S  &hml LGUI D    &hml LSHFT F  &kp G                                                                                           &hmr RC(RALT) H  &hmr RSHFT J  &hmr RGUI K       &hmr RALT L        &hmr RCTRL SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z         &kp X        &kp C          &kp V         &kp B   &kp ESCAPE          &kp UP_ARROW  &kp DOWN   &kp LEFT_ARROW  &kp RIGHT  &kp ENTER       &kp N            &kp M         &kp COMMA         &kp DOT            &kp FSLH              &kp RSHFT
+&magic 3 0  &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END               &thumb 5 BACKSPACE  &kp DELETE    &layer_td  &layer_td       &kp TAB    &thumb 2 SPACE                   &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right         &magic 3 0
             >;
         };
 
