@@ -171,12 +171,12 @@
 
         symbol {
             bindings = <
-&trans           &trans         &trans                &trans                 &trans                                                                                                                            &trans        &trans            &trans             &trans         &trans
-&none            &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                                       &kp F6          &kp F7        &kp F8            &kp F9             &trans         &kp UNDERSCORE
-&kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                                                    &kp UNDERSCORE  &kp PLUS      &trans            &trans             &none          &kp PIPE
-&kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                                                    &kp MINUS       &kp EQUAL     &trans            &trans             &kp SEMI       &kp DOUBLE_QUOTES
-&kp TILDE        &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &kp RG(SPACE)  &kp LA(LBKT)  &kp LA(RBKT)   &kp BSPC        &none         &kp LESS_THAN     &none              &none          &none
-&kp AT           &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &to 0          &kp LA(RET)   &kp LG(SPACE)                  &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right  &none
+&trans           &trans         &trans                &trans                 &trans                                                                                            &none          &none             &none              &none          &trans
+&none            &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                &none  &none          &none             &none              &none          &none
+&kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                             &none  &kp RSHFT      &kp RCTRL         &kp RALT           &kp RGUI       &none
+&kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                             &none  &kp BACKSPACE  &kp TAB           &kp SPACE          &kp ENTER      &none
+&kp TILDE        &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &none  &none  &none  &none  &kp DEL        &kp LS(TAB)       &kp RG(SPACE)      &kp RA(ENTER)  &none
+&kp AT           &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &to 0  &none  &none         &parang_left   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right  &none
             >;
         };
 
