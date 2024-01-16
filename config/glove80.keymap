@@ -76,8 +76,8 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <300>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <210>;
         };
 
         parang_right: parang_right {
