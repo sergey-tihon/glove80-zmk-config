@@ -271,7 +271,7 @@
 &kp GRAVE   &kp Q         &kp W             &kp E              &kp R          &kp T                                                                                            &kp Y            &kp U         &kp I        &kp O         &kp P                 &kp BSLH
 &kp CAPS    &hml LCTRL A  &hmr LALT S       &hml LGUI D        &hml LSHFT F   &kp G                                                                                            &kp H            &hmr RSHFT J  &hmr RGUI K  &hmr LALT L   &hmr RCTRL SEMICOLON  &kp SQT
 &kp LSHFT   &kp Z         &kp X             &kp C              &kp V          &kp B   &kp ESC          &kp LSHFT      &thumb 6 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hmr RC(RALT) N  &kp M         &kp COMMA    &kp DOT       &kp FSLH              &kp RSHFT
-&magic 3 0  &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right          &thumb 5 DELETE  &kp BACKSPACE  &layer_td      &layer_td  &kp TAB        &thumb 2 SPACE                   &kp LEFT      &kp DOWN     &kp UP_ARROW  &kp RIGHT             &kp RG(SPACE)
+&magic 3 0  &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right          &thumb 5 DELETE  &kp BACKSPACE  &layer_td      &layer_td  &kp TAB        &thumb 2 SPACE                   &kp LEFT      &kp DOWN     &kp UP_ARROW  &kp RIGHT             &magic 3 0
             >;
         };
 
