@@ -111,7 +111,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <170>;
             require-prior-idle-ms = <130>;
         };
