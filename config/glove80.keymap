@@ -41,9 +41,9 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
 
-        hml: hml {
+        hrm_left: hrm_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "HRM_LEFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -55,9 +55,9 @@
             require-prior-idle-ms = <190>;
         };
 
-        hmr: hmr {
+        hrm_right: hrm_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+            label = "HRM_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -132,6 +132,54 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        him_index_left: him_index_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HIM_INDEX_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 52 53 54 69 70 71>;
+            require-prior-idle-ms = <230>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 52 53 54 69 70 71>;
+            require-prior-idle-ms = <230>;
+        };
+
+        hrm_index_left: hrm_index_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_INDEX_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 52 53 54 69 70 71>;
+            require-prior-idle-ms = <230>;
+        };
+
+        hrm_index_right: hrm_index_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_INDEX_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
+            require-prior-idle-ms = <230>;
         };
     };
 
@@ -266,12 +314,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2        &kp F3            &kp F4             &kp F5                                                                                                                           &kp F6        &kp F7       &kp F8        &kp F9                &kp F10
-&kp EQUAL   &kp N1        &kp N2            &kp N3             &kp N4         &kp N5                                                                                           &kp N6           &kp N7        &kp N8       &kp N9        &kp N0                &kp MINUS
-&kp GRAVE   &kp Q         &kp W             &kp E              &kp R          &kp T                                                                                            &kp Y            &kp U         &kp I        &kp O         &kp P                 &kp BSLH
-&kp CAPS    &hml LCTRL A  &hmr LALT S       &hml LGUI D        &hml LSHFT F   &kp G                                                                                            &kp H            &hmr RSHFT J  &hmr RGUI K  &hmr LALT L   &hmr RCTRL SEMICOLON  &kp SQT
-&kp LSHFT   &kp Z         &kp X             &kp C              &kp V          &kp B   &kp ESC          &kp LSHFT      &thumb 6 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hmr RC(RALT) N  &kp M         &kp COMMA    &kp DOT       &kp FSLH              &kp RSHFT
-&magic 3 0  &parang_left  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &parang_right          &thumb 5 DELETE  &kp BACKSPACE  &layer_td      &layer_td  &kp TAB        &thumb 2 SPACE                   &kp LEFT      &kp DOWN     &kp UP_ARROW  &kp RIGHT             &magic 3 0
+&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                           &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
+&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                           &kp N6                 &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
+&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                            &kp Y                  &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
+&kp CAPS    &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                            &kp H                  &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &kp B   &kp ESC          &kp LSHFT      &thumb 6 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hrm_right RC(RALT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
+&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                    &thumb 5 DELETE  &kp BACKSPACE  &layer_td      &layer_td  &kp TAB        &thumb 2 SPACE                         &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
             >;
         };
 
