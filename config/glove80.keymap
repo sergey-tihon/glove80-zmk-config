@@ -75,10 +75,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 52 53 54 69 70 71>;
-            require-prior-idle-ms = <130>;
+            require-prior-idle-ms = <170>;
         };
 
         hrm_index_right: hrm_index_right {
@@ -87,10 +87,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
-            require-prior-idle-ms = <130>;
+            require-prior-idle-ms = <170>;
         };
 
         thumb: thumb_layer_access {
@@ -102,7 +102,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <110>;
-            require-prior-idle-ms = <130>;
+            require-prior-idle-ms = <170>;
         };
 
         space: space_layer_access {
@@ -111,9 +111,11 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
-            require-prior-idle-ms = <130>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <170>;
+            hold-trigger-on-release;
         };
 
         parang_right: parang_right {
