@@ -41,32 +41,144 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
 
-        hml: hml {
+        hrm_left: hrm_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "HRM_LEFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 52 53 54 69 70 71>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <170>;
         };
 
-        hmr: hmr {
+        hrm_right: hrm_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+            label = "HRM_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <170>;
+        };
+
+        hrm_index_left: hrm_index_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_INDEX_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 52 53 54 69 70 71>;
+            require-prior-idle-ms = <170>;
+        };
+
+        hrm_index_right: hrm_index_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_INDEX_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
+            require-prior-idle-ms = <170>;
+        };
+
+        thumb: thumb_layer_access {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <110>;
+            require-prior-idle-ms = <170>;
+        };
+
+        space: space_layer_access {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <170>;
+            hold-trigger-on-release;
+        };
+
+        parang_right: parang_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARANG_RIGHT";
+            bindings = <&kp RPAR>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        parang_left: parang_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARANG_LEFT";
+            bindings = <&kp LPAR>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_WORD";
+            #binding-cells = <0>;
+            bindings = <&select_word_right>, <&select_word_left>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_LINE";
+            bindings = <&select_line_right>, <&select_line_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        extend_word: extend_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_WORD";
+            bindings = <&extend_word_right>, <&extend_word_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        extend_line: extend_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_LINE";
+            bindings = <&extend_line_right>, <&extend_line_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        sticky_key: sticky_key {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <2000>;
         };
     };
 
@@ -105,12 +217,93 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        select_word_right: select_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(LEFT) &kp LA(LS(RIGHT))>;
+            label = "SELECT_WORD_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_word_left: select_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_ARROW) &kp LA(RIGHT) &kp LA(LS(LEFT))>;
+            label = "SELECT_WORD_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_line_right: select_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SELECT_LINE_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_line_left: select_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(HOME)>;
+            label = "SELECT_LINE_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        extend_word_right: extend_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(RIGHT))>;
+            label = "EXTEND_WORD_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        extend_word_left: extend_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LEFT))>;
+            label = "EXTEND_WORD_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        extend_line_right: extend_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DOWN) &kp LS(END)>;
+            label = "EXTEND_LINE_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        extend_line_left: extend_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(UP) &kp LS(HOME)>;
+            label = "EXTEND_LINE_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_none: select_none {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN &kp UP &kp LEFT &kp RIGHT>;
+            label = "SELECT_NONE";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        layer_base {
+        qwerty {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
@@ -120,38 +313,38 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2        &kp F3       &kp F4            &kp F5                                                                                                           &kp F6        &kp F7       &kp F8        &kp F9                &kp F10
-&kp EQUAL   &kp N1        &kp N2       &kp N3            &kp N4             &kp N5                                                                       &kp N6           &kp N7        &kp N8       &kp N9        &kp N0                &kp MINUS
-&kp TAB     &kp Q         &kp W        &kp E             &kp R              &kp T                                                                        &kp Y            &kp U         &kp I        &kp O         &kp P                 &kp BSLH
-&kp ESC     &hml LCTRL A  &hmr LALT S  &hml LGUI D       &hml LSHFT F       &kp G                                                                        &hmr RC(RALT) H  &hmr RSHFT J  &hmr RGUI K  &hmr RALT L   &hmr RCTRL SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z         &kp X        &kp C             &kp V              &kp B   &kp LSHFT  &kp LALT       &layer_td  &kp LCTRL  &kp RALT  &kp RSHFT  &kp N            &kp M         &kp COMMA    &kp DOT       &kp FSLH              &kp PG_UP
-&magic 3 0  &kp HOME      &kp END      &kp LEFT_BRACKET  &kp RIGHT_BRACKET          &mo 2      &kp BACKSPACE  &kp LGUI   &kp RGUI   &kp RET   &kp SPACE                   &kp LEFT      &kp DOWN     &kp UP_ARROW  &kp RIGHT             &kp PG_DN
+&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                               &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
+&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                               &kp N6                 &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
+&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                &kp Y                  &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
+&caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                &kp H                  &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &kp B   &kp ESC          &sticky_key LSHFT  &thumb 6 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hrm_right RC(RALT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
+&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                    &thumb 5 DELETE  &kp BACKSPACE      &layer_td      &layer_td  &thumb 2 TAB   &space 2 SPACE                         &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
             >;
         };
 
-        layer_lower {
+        lower {
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                         &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
-&trans        &none         &none       &none       &none      &kp HOME                                                   &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
-&trans        &none         &none       &kp UP      &none      &kp END                                                    &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
-&trans        &none         &kp LEFT    &kp DOWN    &kp RIGHT  &kp PG_UP                                                  &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
-&trans        &kp K_CMENU   &none       &kp F11     &kp F12    &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans        &kp CAPS      &kp INS     &kp F11     &kp F12               &trans  &trans  &trans  &trans  &trans  &trans             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
+&trans        &none         &none       &none       &none      &kp LG(LS(N5))                                                  &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
+&trans        &none         &none       &kp UP      &none      &none                                                           &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
+&trans        &none         &kp LEFT    &kp DOWN    &kp RIGHT  &none                                                           &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
+&trans        &kp K_CMENU   &kp F1      &kp F2      &kp F5     &none           &trans  &tog 6  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans        &kp CAPS      &kp F10     &kp F11     &kp F12                    &tog 5  &none   &trans  &trans  &trans  &tog 2             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
             >;
         };
 
-        layer_symbol {
+        symbol {
             bindings = <
-&trans     &trans  &trans     &trans                &trans                                                                                                                        &trans        &trans         &trans            &trans         &trans
-&kp GRAVE  &kp F1  &kp F2     &kp F3                &kp F4                 &kp F5                                                                                 &kp F6          &kp F7        &kp F8         &kp F9            &trans         &kp UNDERSCORE
-&trans     &trans  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL                                                                                &kp UNDERSCORE  &kp PLUS      &trans         &trans            &none          &kp PIPE
-&trans     &trans  &trans     &kp LBKT              &kp RBKT               &kp TAB                                                                                &kp MINUS       &kp EQUAL     &trans         &trans            &kp SEMI       &kp DOUBLE_QUOTES
-&trans     &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LS(LA(LG(V)))  &trans  &trans  &trans  &kp RG(SPACE)  &kp LA(LBKT)  &kp LA(RBKT)   &kp BSPC        &none         &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION   &kp LG(LA(RIGHT))
-&trans     &trans  &kp F10    &kp F11               &kp F12                                   &trans  &trans  &trans  &kp TAB        &kp LA(RET)   &kp LG(SPACE)                  &kp RA(LEFT)  &trans         &trans            &kp RA(RIGHT)  &kp LG(LA(LEFT))
+&trans           &trans         &trans                &trans                 &trans                                                                                                    &none          &none        &none          &none          &trans
+&none            &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                &none          &none          &none        &none          &none          &none
+&kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                             &none          &kp RSHFT      &kp RGUI     &kp RALT       &kp RCTRL      &none
+&kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                             &none          &kp BACKSPACE  &kp TAB      &kp SPACE      &kp ENTER      &none
+&kp TILDE        &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &none  &none  &none  &kp RG(SPACE)  &kp DEL        &kp LS(TAB)  &kp RC(SPACE)  &kp RA(ENTER)  &none
+&kp AT           &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &to 0  &none  &none                 &trans         &trans       &trans         &trans         &kp RG(SPACE)
             >;
         };
 
-        layer_magic {
+        magic {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
 &none        &none            &none            &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
@@ -162,7 +355,7 @@
             >;
         };
 
-        layer_factory_test {
+        factory_test {
             bindings = <
 &kp N0  &kp N6  &kp N2  &kp N8  &kp N4                                                                  &kp N4  &kp N8  &kp N2  &kp N6  &kp N0
 &kp N1  &kp N7  &kp N3  &kp N9  &kp N5  &kp N0                                                  &kp N0  &kp N5  &kp N9  &kp N3  &kp N7  &kp N1
@@ -170,6 +363,28 @@
 &kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                  &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
 &kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6  &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
 &kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9  &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
+            >;
+        };
+
+        cursor {
+            bindings = <
+&none          &none          &none          &none         &none                                                                                                             &none          &none           &none          &none          &none
+&none          &none          &none          &none         &kp DELETE     &kp INSERT                                                                             &kp INSERT  &kp DELETE     &none           &none          &none          &none
+&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                              &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
+&kp LG(L)      &kp LCTRL      &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                              &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT      &kp RG(L)
+&kp LG(J)      &kp LG(F)      &select_word   &select_line  &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &select_none  &extend_line  &extend_word  &kp RG(V)   &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))  &kp J
+&kp LA(LG(F))  &kp LG(LS(G))  &extend_word   &extend_line  &kp LG(G)                  &none              &none  &to 0  &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN   &kp PAGE_UP    &kp END        &kp RC(RG(SPACE))
+            >;
+        };
+
+        number {
+            bindings = <
+&none           &none      &none     &none     &none                                                                                             &none     &none       &none      &none            &none
+&none           &none      &none     &none     &none       &none                                                                   &kp CARET     &kp HASH  &kp DOLLAR  &kp TILDE  &kp EXCLAMATION  &kp PIPE
+&none           &none      &none     &none     &none       &none                                                                   &kp PERCENT   &kp N7    &kp N8      &kp N9     &kp COLON        &kp K
+&kp KP_NUMLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &none                                                                   &kp PLUS      &kp N4    &kp N5      &kp N6     &kp MINUS        &kp J
+&none           &none      &none     &none     &none       &none  &none  &none  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1    &kp N2      &kp N3     &kp FSLH         &kp RS(G)
+&none           &none      &none     &none     &none              &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &trans    &trans      &trans     &trans           &kp AT_SIGN
             >;
         };
     };
