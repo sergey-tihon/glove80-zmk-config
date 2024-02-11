@@ -10,6 +10,26 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+/* Custom Device-tree */
+// ==== MOUSE-KEY <section begins> ====
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+
+#include <dt-bindings/zmk/mouse.h>
+
+&mmv {
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <1500>;    // 40
+  delay-ms = <0>;                   // 0
+};
+
+&msc {
+  acceleration-exponent = <1>;      // 0
+  time-to-max-speed-ms = <5000>;    // 40
+  delay-ms = <0>;                   // 10
+};
+// ==== MOUSE-KEY <section ends> =====
+
 #define HYPER LC(LS(LG(LALT)))
 
 // layers
