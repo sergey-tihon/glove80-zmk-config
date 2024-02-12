@@ -3,18 +3,18 @@
  *
  * SPDX-License-Identifier: MIT
  */
-/* Custom Device-tree */
-// ==== MOUSE-KEY <section begins> ====
-
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
-
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
+
+/* Custom Device-tree */
+// ==== MOUSE-KEY <section begins> ====
+
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 
 &mmv {
     acceleration-exponent = <1>;      // 1
@@ -27,7 +27,6 @@
     time-to-max-speed-ms = <5000>;    // 40
     delay-ms = <0>;                   // 10
 };
-
 // ==== MOUSE-KEY <section ends> =====
 
 #define HYPER LC(LS(LG(LALT)))
@@ -410,12 +409,12 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                        &trans     &trans    &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                        &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &trans  &none   &trans  &trans  &trans                                                        &trans  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans          &mkp LCLK  &mkp RCLK  &trans  &to 0   &trans  &trans          &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &trans          &trans          &trans                                                                            &trans  &trans     &trans    &trans    &trans
+&trans  &trans  &trans          &trans          &trans           &trans                                                           &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans                                                           &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                                                           &trans  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &trans
+&trans  &trans  &trans          &msc SCRL_DOWN  &msc SCRL_UP     &trans     &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &trans          &trans          &trans                      &mkp LCLK  &mkp RCLK  &trans  &to 0   &trans  &trans          &trans     &trans    &trans    &trans     &trans
             >;
         };
     };
