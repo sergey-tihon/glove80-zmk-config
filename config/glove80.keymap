@@ -3,31 +3,31 @@
  *
  * SPDX-License-Identifier: MIT
  */
+/* Custom Device-tree */
+// ==== MOUSE-KEY <section begins> ====
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-/* Custom Device-tree */
-// ==== MOUSE-KEY <section begins> ====
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
-
-#include <dt-bindings/zmk/mouse.h>
-
 &mmv {
-  acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <1500>;    // 40
-  delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;      // 1
+    time-to-max-speed-ms = <1500>;    // 40
+    delay-ms = <0>;                   // 0
 };
 
 &msc {
-  acceleration-exponent = <1>;      // 0
-  time-to-max-speed-ms = <5000>;    // 40
-  delay-ms = <0>;                   // 10
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <5000>;    // 40
+    delay-ms = <0>;                   // 10
 };
+
 // ==== MOUSE-KEY <section ends> =====
 
 #define HYPER LC(LS(LG(LALT)))
@@ -338,7 +338,7 @@
 &kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                &kp Y                  &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
 &caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                &kp H                  &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
 &kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &kp B   &kp ESC          &sticky_key LSHFT  &thumb 6 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hrm_right RC(RALT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
-&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                    &thumb 5 DELETE  &kp BACKSPACE      &layer_td      &layer_td  &thumb 2 TAB   &space 2 SPACE                         &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
+&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                    &thumb 5 DELETE  &kp BACKSPACE      &layer_td      &layer_td  &thumb 7 TAB   &space 2 SPACE                         &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
             >;
         };
 
@@ -349,7 +349,7 @@
 &trans        &none         &none       &kp UP      &none      &none                                                           &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
 &trans        &none         &kp LEFT    &kp DOWN    &kp RIGHT  &none                                                           &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
 &trans        &kp K_CMENU   &kp F1      &kp F2      &kp F5     &none           &trans  &tog 6  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans        &kp CAPS      &kp F10     &kp F11     &kp F12                    &tog 5  &none   &trans  &trans  &trans  &tog 2             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+&trans        &kp CAPS      &kp F10     &kp F11     &kp F12                    &tog 5  &none   &trans  &trans  &tog 7  &tog 2             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
             >;
         };
 
@@ -405,6 +405,17 @@
 &kp KP_NUMLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &none                                                                   &kp PLUS      &kp N4    &kp N5      &kp N6     &kp MINUS        &kp J
 &none           &none      &none     &none     &none       &none  &none  &none  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1    &kp N2      &kp N3     &kp FSLH         &kp RS(G)
 &none           &none      &none     &none     &none              &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &trans    &trans      &trans     &trans           &kp AT_SIGN
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                        &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                        &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                        &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &none   &trans  &trans  &trans                                                        &trans  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans          &mkp LCLK  &mkp RCLK  &trans  &to 0   &trans  &trans          &trans     &trans    &trans    &trans     &trans
             >;
         };
     };
