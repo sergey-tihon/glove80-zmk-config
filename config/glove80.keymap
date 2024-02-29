@@ -368,12 +368,12 @@
 
         cursor {
             bindings = <
-&none          &none          &none          &none         &none                                                                                                             &none          &none           &none          &none          &none
-&none          &none          &none          &none         &kp DELETE     &kp INSERT                                                                             &kp INSERT  &kp DELETE     &none           &none          &none          &none
-&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                              &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
-&kp LG(L)      &kp LCTRL      &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                              &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT      &kp RG(L)
-&kp LG(J)      &kp LG(F)      &select_word   &select_line  &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &select_none  &extend_line  &extend_word  &kp RG(V)   &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))  &kp J
-&kp LA(LG(F))  &kp LG(LS(G))  &extend_word   &extend_line  &kp LG(G)                  &none              &none  &to 0  &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN   &kp PAGE_UP    &kp END        &kp RC(RG(SPACE))
+&none          &none           &none          &none         &none                                                                                                                         &none          &none           &none          &none          &none
+&none          &none           &none          &none         &kp DELETE     &kp INSERT                                                                                         &kp INSERT  &kp DELETE     &none           &none          &none          &none
+&kp LG(K)      &sk LEFT_SHIFT  &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                                          &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
+&kp LG(L)      &kp LCTRL       &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                                          &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT      &kp RG(L)
+&kp LG(J)      &kp LG(A)       &select_line   &select_word  &kp LG(F)      &kp LG(V)   &kp LS(LA(LG(V)))  &kp LC(TAB)  &kp LA(TAB)  &select_none  &extend_line  &extend_word  &kp RG(V)   &kp HOME       &kp PAGE_UP     &kp PAGE_DOWN  &kp END        &kp J
+&kp LA(LG(F))  &kp LG(LS(G))   &extend_line   &extend_word  &kp LG(G)                  &none              &kp LG(TAB)  &to 0        &kp RG(A)     &select_line  &select_word              &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))  &kp RC(RG(SPACE))
             >;
         };
 
