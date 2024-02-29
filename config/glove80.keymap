@@ -379,12 +379,12 @@
 
         number {
             bindings = <
-&none           &none      &none     &none     &none                                                                                             &none     &none       &none      &none            &none
-&none           &none      &none     &none     &none       &none                                                                   &kp CARET     &kp HASH  &kp DOLLAR  &kp TILDE  &kp EXCLAMATION  &kp PIPE
-&none           &none      &none     &none     &none       &none                                                                   &kp PERCENT   &kp N7    &kp N8      &kp N9     &kp COLON        &kp K
-&kp KP_NUMLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &none                                                                   &kp PLUS      &kp N4    &kp N5      &kp N6     &kp MINUS        &kp J
-&none           &none      &none     &none     &none       &none  &none  &none  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1    &kp N2      &kp N3     &kp FSLH         &kp RS(G)
-&none           &none      &none     &none     &none              &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &trans    &trans      &trans     &trans           &kp AT_SIGN
+&none           &none                   &none         &none         &none                                                                                                    &none       &none     &none   &none            &none
+&none           &kp UNDERSCORE          &kp D         &kp E         &kp F          &none                                                                       &kp CARET     &kp DOLLAR  &kp HASH  &kp AT  &kp EXCLAMATION  &kp PIPE
+&caps_word      &none                   &kp A         &kp B         &kp C          &kp ENTER                                                                   &kp PERCENT   &kp N7      &kp N8    &kp N9  &kp COLON        &kp K
+&kp KP_NUMLOCK  &kp LCTRL               &kp LALT      &kp LGUI      &kp LSHIFT     &kp TAB                                                                     &kp PLUS      &kp N4      &kp N5    &kp N6  &kp MINUS        &kp J
+&kp LG(Z)       &kp LG(A)               &select_line  &select_word  &kp BACKSPACE  &kp SPACE  &none  &none  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1      &kp N2    &kp N3  &kp FSLH         &kp RS(G)
+&kp LG(LS(Z))   &sticky_key LEFT_SHIFT  &extend_line  &extend_word  &kp DELETE                &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &trans      &trans    &trans  &trans           &kp TILDE
             >;
         };
     };
