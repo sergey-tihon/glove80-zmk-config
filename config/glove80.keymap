@@ -100,7 +100,7 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <110>;
             require-prior-idle-ms = <170>;
         };
@@ -317,7 +317,7 @@
 &kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                               &kp N6                 &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
 &kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                &kp Y                  &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
 &caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                &kp H                  &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
-&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &kp B   &kp ESC          &sticky_key LSHFT  &thumb 6 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hrm_right RC(RALT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
+&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &kp B   &thumb 6 ESCAPE  &sticky_key LSHFT  &thumb 7 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hrm_right RC(RALT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
 &magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                    &thumb 5 DELETE  &kp BACKSPACE      &layer_td      &layer_td  &thumb 2 TAB   &space 2 SPACE                         &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
             >;
         };
@@ -337,10 +337,10 @@
             bindings = <
 &trans           &trans         &trans                &trans                 &trans                                                                                                    &none          &none        &none          &none          &trans
 &none            &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                &none          &none          &none        &none          &none          &none
-&kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                             &none          &kp RSHFT      &kp RGUI     &kp RALT       &kp RCTRL      &none
-&kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                             &none          &kp BACKSPACE  &kp TAB      &kp SPACE      &kp ENTER      &none
-&kp TILDE        &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &none  &none  &none  &kp RG(SPACE)  &kp DEL        &kp LS(TAB)  &kp RC(SPACE)  &kp RA(ENTER)  &none
-&kp AT           &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &to 0  &none  &none                 &trans         &trans       &trans         &trans         &kp RG(SPACE)
+&kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                             &kp SEMICOLON  &kp RSHFT      &kp RGUI     &kp RALT       &kp RCTRL      &none
+&kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                             &kp DOT        &kp BACKSPACE  &kp TAB      &kp SPACE      &kp ENTER      &none
+&kp AT           &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &none  &none  &none  &kp RG(SPACE)  &kp DEL        &kp LS(TAB)  &kp RC(SPACE)  &kp RA(ENTER)  &none
+&kp TILDE        &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &to 0  &none  &none                 &trans         &trans       &trans         &trans         &kp RG(SPACE)
             >;
         };
 
@@ -368,23 +368,34 @@
 
         cursor {
             bindings = <
-&none          &none          &none          &none         &none                                                                                                             &none          &none           &none          &none          &none
-&none          &none          &none          &none         &kp DELETE     &kp INSERT                                                                             &kp INSERT  &kp DELETE     &none           &none          &none          &none
-&kp LG(K)      &sk LSHFT      &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                              &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
-&kp LG(L)      &kp LCTRL      &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                              &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT      &kp RG(L)
-&kp LG(J)      &kp LG(F)      &select_word   &select_line  &kp LG(A)      &kp LG(V)   &kp LS(LA(LG(V)))  &none  &none  &select_none  &extend_line  &extend_word  &kp RG(V)   &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))  &kp J
-&kp LA(LG(F))  &kp LG(LS(G))  &extend_word   &extend_line  &kp LG(G)                  &none              &none  &to 0  &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN   &kp PAGE_UP    &kp END        &kp RC(RG(SPACE))
+&none          &none           &none          &none         &none                                                                                                                         &none          &none           &none          &none          &none
+&none          &none           &none          &none         &kp DELETE     &kp INSERT                                                                                         &kp INSERT  &kp DELETE     &none           &none          &none          &none
+&kp LG(K)      &sk LEFT_SHIFT  &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                                          &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RSHFT      &kp RG(K)
+&kp LG(L)      &kp LCTRL       &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                                          &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT      &kp RG(L)
+&kp LG(J)      &kp LG(A)       &select_line   &select_word  &kp LG(F)      &kp LG(V)   &kp LS(LA(LG(V)))  &kp LC(TAB)  &kp LA(TAB)  &select_none  &extend_line  &extend_word  &kp RG(V)   &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))  &kp J
+&kp LA(LG(F))  &kp LG(LS(G))   &extend_line   &extend_word  &kp LG(G)                  &none              &kp LG(TAB)  &to 0        &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN   &kp PG_UP      &kp END        &kp RC(RG(SPACE))
             >;
         };
 
         number {
             bindings = <
-&none           &none      &none     &none     &none                                                                                             &none     &none       &none      &none            &none
-&none           &none      &none     &none     &none       &none                                                                   &kp CARET     &kp HASH  &kp DOLLAR  &kp TILDE  &kp EXCLAMATION  &kp PIPE
-&none           &none      &none     &none     &none       &none                                                                   &kp PERCENT   &kp N7    &kp N8      &kp N9     &kp COLON        &kp K
-&kp KP_NUMLOCK  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &none                                                                   &kp PLUS      &kp N4    &kp N5      &kp N6     &kp MINUS        &kp J
-&none           &none      &none     &none     &none       &none  &none  &none  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1    &kp N2      &kp N3     &kp FSLH         &kp RS(G)
-&none           &none      &none     &none     &none              &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &trans    &trans      &trans     &trans           &kp AT_SIGN
+&none           &none                   &none         &none         &none                                                                                                    &none       &none     &none   &none            &none
+&none           &kp UNDERSCORE          &kp D         &kp E         &kp F          &none                                                                       &kp CARET     &kp DOLLAR  &kp HASH  &kp AT  &kp EXCLAMATION  &kp PIPE
+&caps_word      &none                   &kp A         &kp B         &kp C          &kp ENTER                                                                   &kp PERCENT   &kp N7      &kp N8    &kp N9  &kp COLON        &kp K
+&kp KP_NUMLOCK  &kp LCTRL               &kp LALT      &kp LGUI      &kp LSHIFT     &kp TAB                                                                     &kp PLUS      &kp N4      &kp N5    &kp N6  &kp MINUS        &kp J
+&kp LG(Z)       &kp LG(A)               &select_line  &select_word  &kp BACKSPACE  &kp SPACE  &none  &none  &none  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1      &kp N2    &kp N3  &kp FSLH         &kp RS(G)
+&kp LG(LS(Z))   &sticky_key LEFT_SHIFT  &extend_line  &extend_word  &kp DELETE                &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &trans      &trans    &trans  &trans           &kp TILDE
+            >;
+        };
+
+        function {
+            bindings = <
+&none     &none      &none     &none     &none                                                                                                     &none                     &none                 &none                 &none                     &none
+&none     &none      &none     &none     &none      &none                                                                        &kp C_MEDIA_HOME  &kp C_PLAY                &kp C_PREV            &kp C_NEXT            &kp C_STOP                &kp C_EJECT
+&none     &none      &none     &none     &none      &none                                                                        &kp K_WWW         &kp F7                    &kp F8                &kp F9                &kp F10                   &kp F13
+&kp CAPS  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                                                                        &kp K_CALC        &kp F4                    &kp F5                &kp F6                &kp F11                   &kp F14
+&none     &none      &none     &none     &none      &none  &none  &none  &none  &kp C_PREV  &kp C_NEXT         &kp C_PLAY_PAUSE  &kp C_AL_FILES    &kp F1                    &kp F2                &kp F3                &kp F12                   &kp F15
+&none     &none      &none     &none     &none             &none  &none  &to 0  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                     &kp C_BRIGHTNESS_MINIMUM  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_MINIMUM  &kp C_BRIGHTNESS_AUTO
             >;
         };
     };
