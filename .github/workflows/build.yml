@@ -16,7 +16,7 @@ jobs:
           path: src
       - uses: cachix/install-nix-action@v30
         with:
-          nix_path: nixpkgs=channel:nixos-22.05
+          nix_path: nixpkgs=channel:nixos-24.11
       - uses: cachix/cachix-action@v15
         with:
           name: moergo-glove80-zmk-dev
