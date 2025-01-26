@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define HYPER LC(LS(LG(LALT)))
@@ -317,12 +319,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                 &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
-&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                           &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
-&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                            &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
-&caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                            &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
-&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 6 ESCAPE  &sk LSHIFT     &thumb 7 HOME  &kp END  &kp RG(SPACE)  &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
-&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 5 DELETE  &kp BACKSPACE  &layer_td      &to 8    &thumb 8 TAB   &space 2 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
+&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                   &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
+&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                             &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
+&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                              &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
+&caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                              &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 6 ESCAPE  &sk LSHIFT     &thumb 7 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
+&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 5 DELETE  &kp BACKSPACE  &layer_td      &layer_td  &thumb 8 TAB   &space 2 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
             >;
         };
 
@@ -405,12 +407,12 @@
 
         mouse {
             bindings = <
-&trans  &trans          &trans          &trans          &trans                                                                                 &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans          &trans          &trans           &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &msc SCRL_DOWN  &trans          &trans          &trans           &trans  &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans          &trans          &trans                   &mkp LCLK  &mkp RCLK  &trans  &to 0   &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&none  &none           &none           &none           &none                                                                                     &none  &none  &none  &none  &none
+&none  &none           &none           &none           &none            &none                                                         &none      &none  &none  &none  &none  &none
+&none  &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp LG(X)                                                     &kp RG(X)  &none  &none  &none  &none  &none
+&none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LG(C)                                                     &kp RG(C)  &none  &none  &none  &none  &none
+&none  &msc SCRL_DOWN  &none           &none           &none            &kp LG(V)  &mkp MCLK  &kp K_APP  &none  &tog 8  &none  &none  &kp RG(V)  &none  &none  &none  &none  &none
+&none  &none           &none           &none           &none                       &mkp LCLK  &mkp RCLK  &none  &none   &none  &none             &none  &none  &none  &none  &none
             >;
         };
     };
