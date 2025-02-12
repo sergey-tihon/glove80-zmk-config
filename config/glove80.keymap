@@ -319,23 +319,23 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                   &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
-&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                             &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
-&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                              &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
-&caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                              &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
-&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 6 ESCAPE  &sk LSHIFT     &thumb 7 HOME  &kp END    &kp RG(SPACE)  &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
-&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 5 DELETE  &kp BACKSPACE  &layer_td      &layer_td  &thumb 8 TAB   &space 2 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
+&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                             &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
+&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                                       &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
+&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                                        &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
+&caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                                        &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 7 ESCAPE  &sk LSHFT           &layer_td       &layer_td      &kp RG(SPACE)  &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
+&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 5 DELETE  &thumb 6 BACKSPACE  &thumb 1 LG(S)  &kp BACKSPACE  &thumb 8 TAB   &space 2 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
             >;
         };
 
         lower {
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                               &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
-&kp PLUS      &none         &none       &none       &kp LC(LG(LA(NUMBER_4)))  &kp LG(LA(LC(N5)))                                                &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
-&kp TAB       &none         &none       &kp UP      &none                     &none                                                             &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
-&kp ESCAPE    &none         &kp LEFT    &kp DOWN    &kp RIGHT                 &none                                                             &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
-&kp TILDE     &kp K_CMENU   &kp F1      &kp F2      &kp F5                    &none               &to 6  &none  &to 7   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans        &kp CAPS      &kp F10     &kp F11     &kp F12                                       &to 5  &none  &trans  &trans  &to 8   &to 2              &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
+&kp PLUS      &none         &none       &none       &kp LC(LG(LA(NUMBER_4)))  &kp LG(LA(LC(N5)))                                            &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
+&kp TAB       &none         &none       &kp UP      &none                     &none                                                         &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
+&kp ESCAPE    &none         &kp LEFT    &kp DOWN    &kp RIGHT                 &none                                                         &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
+&kp TILDE     &kp K_CMENU   &kp F1      &kp F2      &kp F5                    &none               &to 7  &none  &none  &none  &none  &none  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans        &kp CAPS      &kp F10     &kp F11     &kp F12                                       &to 5  &to 6  &none  &none  &to 8  &to 2             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
             >;
         };
 
@@ -345,8 +345,8 @@
 &none            &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                &none          &none          &none        &none          &none          &none
 &kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                             &kp SEMICOLON  &kp RSHFT      &kp RGUI     &kp RALT       &kp RCTRL      &none
 &kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                             &kp DOT        &kp BACKSPACE  &kp TAB      &kp SPACE      &kp ENTER      &none
-&kp AT           &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &none  &none  &none  &kp RG(SPACE)  &kp DEL        &kp LS(TAB)  &kp RC(SPACE)  &kp RA(ENTER)  &none
-&kp TILDE        &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &to 0  &none  &none                 &trans         &trans       &trans         &trans         &kp RG(SPACE)
+&kp AT           &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &to 0  &none  &none  &kp RG(SPACE)  &kp DEL        &kp LS(TAB)  &kp RC(SPACE)  &kp RA(ENTER)  &none
+&kp TILDE        &kp AMPERSAND  &kp LBKT              &kp RBKT               &kp PLUS                        &kp PERCENT  &kp COLON  &kp SEMI      &none  &none  &none                 &trans         &trans       &trans         &trans         &kp RG(SPACE)
             >;
         };
 
@@ -374,12 +374,12 @@
 
         cursor {
             bindings = <
-&none          &none            &none          &none         &none                                                                                                                         &none          &none           &none          &none            &none
-&kp ESC        &kp ENTER        &kp SPACE      &kp TAB       &kp DELETE     &kp INSERT                                                                                         &kp INSERT  &kp DELETE     &kp TAB         &kp SPACE      &kp ENTER        &kp ESC
-&kp LG(K)      &sk RIGHT_SHIFT  &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                                          &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RIGHT_SHIFT  &kp RG(K)
-&kp LG(L)      &kp LCTRL        &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                                          &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT        &kp RG(L)
-&kp LG(J)      &kp LG(A)        &select_line   &select_word  &kp LG(F)      &kp LG(V)   &kp LS(LA(LG(V)))  &kp LC(TAB)  &kp LA(TAB)  &select_none  &extend_line  &extend_word  &kp RG(V)   &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))    &kp RG(J)
-&kp LA(LG(F))  &kp LG(LS(G))    &extend_line   &extend_word  &kp LG(G)                  &none              &kp LG(TAB)  &to 0        &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN   &kp PG_UP      &kp END          &kp RC(RG(SPACE))
+&none          &none            &none          &none         &none                                                                                                                                 &none          &none           &none          &none            &none
+&kp ESC        &kp ENTER        &kp SPACE      &kp TAB       &kp DELETE     &kp LG(LA(LC(N5)))                                                                                         &kp INSERT  &kp DELETE     &kp TAB         &kp SPACE      &kp ENTER        &kp ESC
+&kp LG(K)      &sk RIGHT_SHIFT  &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                                                  &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RIGHT_SHIFT  &kp RG(K)
+&kp LG(L)      &kp LCTRL        &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                                                  &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT        &kp RG(L)
+&kp LG(J)      &kp LG(A)        &select_line   &select_word  &kp LG(F)      &kp LG(V)           &kp LS(LA(LG(V)))  &kp LC(TAB)  &to 0        &select_none  &extend_line  &extend_word  &kp RG(V)   &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))    &kp RG(J)
+&kp LA(LG(F))  &kp LG(LS(G))    &extend_line   &extend_word  &kp LG(G)                          &none              &kp LG(TAB)  &kp LA(TAB)  &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN   &kp PG_UP      &kp END          &kp RC(RG(SPACE))
             >;
         };
 
@@ -389,8 +389,8 @@
 &kp ESC         &kp ENTER  &kp SPACE      &kp TAB       &kp DELETE     &kp INSERT                                                                   &kp CARET     &kp DOLLAR  &kp HASH  &kp AT  &kp EXCLAMATION  &kp PIPE
 &none           &sk LSHFT  &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp A                                                                        &kp PERCENT   &kp N7      &kp N8    &kp N9  &kp COLON        &kp K
 &kp LG(ESCAPE)  &kp LCTRL  &kp LALT       &kp LGUI      &kp LSHIFT     &kp B                                                                        &kp PLUS      &kp N4      &kp N5    &kp N6  &kp MINUS        &kp J
-&none           &kp LG(A)  &select_line   &select_word  &kp BACKSPACE  &kp D       &kp E  &kp F  &kp G  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1      &kp N2    &kp N3  &kp FSLH         &kp RS(G)
-&none           &none      &extend_line   &extend_word  &kp DELETE                 &none  &none  &to 0  &kp COMMA      &kp DOT           &kp N0                   &trans      &trans    &trans  &trans           &kp TILDE
+&none           &kp LG(A)  &select_line   &select_word  &kp BACKSPACE  &kp D       &kp E  &kp F  &to 0  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp ASTERISK  &kp N1      &kp N2    &kp N3  &kp FSLH         &kp RS(G)
+&none           &none      &extend_line   &extend_word  &kp DELETE                 &none  &none  &none  &kp COMMA      &kp DOT           &kp N0                   &trans      &trans    &trans  &trans           &kp TILDE
             >;
         };
 
@@ -400,19 +400,19 @@
 &none     &none      &none     &none     &none      &none                                                                        &kp C_MEDIA_HOME  &kp C_PLAY                &kp C_PREV            &kp C_NEXT            &kp C_STOP                &kp C_EJECT
 &none     &none      &none     &none     &none      &none                                                                        &kp K_WWW         &kp F7                    &kp F8                &kp F9                &kp F10                   &kp F13
 &kp CAPS  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                                                                        &kp K_CALC        &kp F4                    &kp F5                &kp F6                &kp F11                   &kp F14
-&none     &none      &none     &none     &none      &none  &none  &none  &none  &kp C_PREV  &kp C_NEXT         &kp C_PLAY_PAUSE  &kp C_AL_FILES    &kp F1                    &kp F2                &kp F3                &kp F12                   &kp F15
-&none     &none      &none     &none     &none             &none  &none  &to 0  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                     &kp C_BRIGHTNESS_MINIMUM  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_MINIMUM  &kp C_BRIGHTNESS_AUTO
+&none     &none      &none     &none     &none      &none  &none  &none  &to 0  &kp C_PREV  &kp C_NEXT         &kp C_PLAY_PAUSE  &kp C_AL_FILES    &kp F1                    &kp F2                &kp F3                &kp F12                   &kp F15
+&none     &none      &none     &none     &none             &none  &none  &none  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                     &kp C_BRIGHTNESS_MINIMUM  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_MINIMUM  &kp C_BRIGHTNESS_AUTO
             >;
         };
 
         mouse {
             bindings = <
-&none  &none           &none           &none           &none                                                                                     &none            &none           &none          &none            &none
-&none  &none           &none           &none           &none            &none                                                         &none      &sk RIGHT_SHIFT  &sk RGUI        &sk RIGHT_ALT  &sk RCTRL        &none
-&none  &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp LG(X)                                                     &kp RG(X)  &none            &none           &none          &none            &none
-&none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LG(C)                                                     &kp RG(C)  &msc SCRL_LEFT   &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &none
-&none  &msc SCRL_DOWN  &none           &none           &none            &kp LG(V)  &mkp MCLK  &kp K_APP  &none  &tog 8  &none  &none  &kp RG(V)  &mkp LCLK        &mkp RCLK       &mkp MCLK      &kp K_APP        &none
-&none  &none           &none           &none           &none                       &mkp LCLK  &mkp RCLK  &none  &to 0   &none  &none             &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &none
+&none  &none           &none           &none           &none                                                                                    &none            &none           &none          &none            &none
+&none  &none           &none           &none           &none            &none                                                        &none      &sk RIGHT_SHIFT  &sk RGUI        &sk RIGHT_ALT  &sk RCTRL        &none
+&none  &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp LG(X)                                                    &kp RG(X)  &none            &none           &none          &none            &none
+&none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LG(C)                                                    &kp RG(C)  &msc SCRL_LEFT   &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &none
+&none  &msc SCRL_DOWN  &none           &none           &none            &kp LG(V)  &mkp MCLK  &kp K_APP  &none  &to 0  &none  &none  &kp RG(V)  &mkp LCLK        &mkp RCLK       &mkp MCLK      &kp K_APP        &none
+&none  &none           &none           &none           &none                       &mkp LCLK  &mkp RCLK  &none  &none  &none  &none             &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &none
             >;
         };
     };
