@@ -317,23 +317,23 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                            &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
-&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                                      &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
-&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                                       &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
-&caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                                       &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
-&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 7 ESCAPE  &sk LSHFT           &layer_td       &layer_td      &kp GLOBE     &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
-&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 5 DELETE  &thumb 6 BACKSPACE  &thumb 1 LG(S)  &kp BACKSPACE  &thumb 8 TAB  &space 2 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
+&kp F1      &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                             &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
+&kp EQUAL   &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                                       &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
+&kp GRAVE   &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                                        &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
+&caps_word  &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                                        &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 7 ESCAPE     &sk LSHFT        &layer_td       &layer_td      &kp LG(SPACE)  &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp RSHFT
+&magic 3 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 5 BACKSPACE  &thumb 6 DELETE  &thumb 1 LG(S)  &kp BACKSPACE  &thumb 8 TAB   &space 2 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &magic 3 0
             >;
         };
 
         lower {
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
-&kp PLUS      &none         &none       &none       &kp LC(LG(LA(NUMBER_4)))  &kp LG(LA(LC(N5)))                                            &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
-&kp TAB       &none         &none       &kp UP      &none                     &none                                                         &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
-&kp ESCAPE    &none         &kp LEFT    &kp DOWN    &kp RIGHT                 &none                                                         &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
-&kp TILDE     &kp K_CMENU   &kp F1      &kp F2      &kp F5                    &none               &to 7  &none  &none  &none  &none  &none  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans        &kp CAPS      &kp F10     &kp F11     &kp F12                                       &to 5  &to 6  &none  &none  &to 8  &to 2             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+&kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none            &kp PAUSE_BREAK
+&kp PLUS      &none         &none       &none       &kp LC(LG(LA(NUMBER_4)))  &kp LG(LA(LC(N5)))                                               &kp LPAR   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp PSCRN
+&kp TAB       &none         &none       &kp UP      &none                     &kp LS(LA(LG(LC(D))))                                            &kp RPAR   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp SLCK
+&kp ESCAPE    &none         &kp LEFT    &kp DOWN    &kp RIGHT                 &none                                                            &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
+&kp TILDE     &kp K_CMENU   &kp F1      &kp F2      &kp F5                    &none                  &to 7  &none  &none  &none  &none  &none  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans        &kp CAPS      &kp F10     &kp F11     &kp F12                                          &to 5  &to 6  &none  &none  &to 8  &to 2             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
             >;
         };
 
