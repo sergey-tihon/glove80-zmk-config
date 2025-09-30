@@ -20,6 +20,45 @@
 #define MAGIC 2
 #define FACTORY_TEST 3
 
+/* Input Listeners */
+&mmv_input_listener {
+    // LAYER_MouseSlow
+    // 
+    Mouse_Slow {
+        layers = <10>;
+        input-processors = <&zip_xy_scaler 1 9>;
+    };
+    // LAYER_MouseFast
+    Mouse_Fast {
+        layers = <11>;
+        input-processors = <&zip_xy_scaler 3 1>;
+    };
+    // LAYER_MouseWarp
+    Mouse_Warp {
+        layers = <12>;
+        input-processors = <&zip_xy_scaler 12 1>;
+    };
+};
+
+&msc_input_listener {
+    // LAYER_MouseSlow
+    // 
+    Mouse_Slow {
+        layers = <10>;
+        input-processors = <&zip_scroll_scaler 1 9>;
+    };
+    // LAYER_MouseFast
+    Mouse_Fast {
+        layers = <11>;
+        input-processors = <&zip_scroll_scaler 3 1>;
+    };
+    // LAYER_MouseWarp
+    Mouse_Warp {
+        layers = <12>;
+        input-processors = <&zip_scroll_scaler 12 1>;
+    };
+};
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
