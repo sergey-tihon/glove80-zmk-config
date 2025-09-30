@@ -31,17 +31,17 @@
     // 
     LAYER_MouseSlow {
         layers = <10>;
-        input-processors = <&zip_xy_scaler 1 9>;
+        input-processors = <&zip_xy_scaler 1 2>;
     };
     // LAYER_MouseFast
     LAYER_MouseFast {
         layers = <11>;
-        input-processors = <&zip_xy_scaler 3 1>;
+        input-processors = <&zip_xy_scaler 2 1>;
     };
     // LAYER_MouseWarp
     LAYER_MouseWarp {
         layers = <12>;
-        input-processors = <&zip_xy_scaler 12 1>;
+        input-processors = <&zip_xy_scaler 4 1>;
     };
 };
 
@@ -50,17 +50,17 @@
     // 
     LAYER_MouseSlow {
         layers = <10>;
-        input-processors = <&zip_scroll_scaler 1 9>;
+        input-processors = <&zip_scroll_scaler 1 2>;
     };
     // LAYER_MouseFast
     LAYER_MouseFast {
         layers = <11>;
-        input-processors = <&zip_scroll_scaler 3 1>;
+        input-processors = <&zip_scroll_scaler 2 1>;
     };
     // LAYER_MouseWarp
     LAYER_MouseWarp {
         layers = <12>;
-        input-processors = <&zip_scroll_scaler 12 1>;
+        input-processors = <&zip_scroll_scaler 4 1>;
     };
 };
 
