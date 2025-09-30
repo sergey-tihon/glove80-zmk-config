@@ -19,22 +19,25 @@
 #define LOWER 1
 #define MAGIC 2
 #define FACTORY_TEST 3
+#define LAYER_MouseSlow 10
+#define LAYER_MouseFast 11
+#define LAYER_MouseWarp 12
 
 /* Input Listeners */
 &mmv_input_listener {
     // LAYER_MouseSlow
     // 
-    Mouse_Slow {
+    LAYER_MouseSlow {
         layers = <10>;
         input-processors = <&zip_xy_scaler 1 9>;
     };
     // LAYER_MouseFast
-    Mouse_Fast {
+    LAYER_MouseFast {
         layers = <11>;
         input-processors = <&zip_xy_scaler 3 1>;
     };
     // LAYER_MouseWarp
-    Mouse_Warp {
+    LAYER_MouseWarp {
         layers = <12>;
         input-processors = <&zip_xy_scaler 12 1>;
     };
@@ -43,17 +46,17 @@
 &msc_input_listener {
     // LAYER_MouseSlow
     // 
-    Mouse_Slow {
+    LAYER_MouseSlow {
         layers = <10>;
         input-processors = <&zip_scroll_scaler 1 9>;
     };
     // LAYER_MouseFast
-    Mouse_Fast {
+    LAYER_MouseFast {
         layers = <11>;
         input-processors = <&zip_scroll_scaler 3 1>;
     };
     // LAYER_MouseWarp
-    Mouse_Warp {
+    LAYER_MouseWarp {
         layers = <12>;
         input-processors = <&zip_scroll_scaler 12 1>;
     };
