@@ -371,12 +371,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1       &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                            &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
-&kp EQUAL    &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                                      &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
-&kp GRAVE    &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                                       &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
-&caps_word   &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                                       &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
-&kp LSHFT    &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 6 ESCAPE     &sk LSHFT        &layer_td       &layer_td      &kp CAPS      &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp PAGE_UP
-&magic 12 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 4 BACKSPACE  &thumb 5 DELETE  &thumb 2 LG(S)  &kp BACKSPACE  &thumb 7 TAB  &space 3 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &kp PAGE_DOWN
+&kp F1       &kp F2             &kp F3             &kp F4             &kp F5                                                                                                                                                                              &kp F6                    &kp F7             &kp F8             &kp F9                      &kp F10
+&kp EQUAL    &kp N1             &kp N2             &kp N3             &kp N4                   &kp N5                                                                                                                        &kp N6                       &kp N7                    &kp N8             &kp N9             &kp N0                      &kp MINUS
+&kp TAB      &kp Q              &kp W              &kp E              &kp R                    &kp T                                                                                                                         &kp Y                        &kp U                     &kp I              &kp O              &kp P                       &kp BSLH
+&kp ESCAPE   &hrm_left LCTRL A  &hrm_right LALT S  &hrm_left LGUI D   &hrm_index_left LSHFT F  &kp G                                                                                                                         &kp H                        &hrm_index_right RSHFT J  &hrm_right RGUI K  &hrm_right LALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
+&kp GRAVE    &kp Z              &kp X              &kp C              &kp V                    &hrm_left LC(LEFT_ALT) B  &thumb 6 ESCAPE     &caps_word       &layer_td       &layer_td      &kp CAPS        &kp ENTER       &hrm_right RA(LEFT_SHIFT) N  &kp M                     &kp COMMA          &kp DOT            &kp FSLH                    &kp PAGE_UP
+&magic 12 0  &parang_left       &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &parang_right                                      &thumb 4 BACKSPACE  &thumb 5 DELETE  &thumb 2 LG(S)  &kp BACKSPACE  &thumb 7 ENTER  &space 3 SPACE                               &kp LEFT                  &kp DOWN           &kp UP_ARROW       &kp RIGHT                   &kp PAGE_DOWN
             >;
         };
 
@@ -405,7 +405,7 @@
         Symbol {
             bindings = <
 &trans           &trans         &trans                &trans                 &trans                                                                                                    &none          &none        &none          &none          &trans
-&none            &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                &none          &none          &none        &none          &none          &none
+&kp GRAVE        &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                &none          &none          &none        &none          &none          &none
 &kp EXCLAMATION  &kp LBRC       &kp SQT               &kp DOUBLE_QUOTES      &kp RBRC          &kp QUESTION                                                             &kp SEMICOLON  &kp RSHFT      &kp RGUI     &kp RALT       &kp RCTRL      &none
 &kp HASH         &kp CARET      &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                             &kp DOT        &kp BACKSPACE  &kp TAB      &kp SPACE      &kp ENTER      &none
 &kp AT           &kp LESS_THAN  &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp FSLH      &kp BSLH     &kp DOT    &kp ASTERISK  &to 0  &none  &none  &kp RG(SPACE)  &kp DEL        &kp LS(TAB)  &kp RC(SPACE)  &kp RA(ENTER)  &none
@@ -415,12 +415,12 @@
 
         Cursor {
             bindings = <
-&none          &none            &none          &none         &none                                                                                                                                 &none          &none           &none          &none            &none
-&kp ESC        &kp ENTER        &kp SPACE      &kp TAB       &kp DELETE     &kp LG(LA(LC(N5)))                                                                                         &kp INSERT  &kp DELETE     &kp TAB         &kp SPACE      &kp ENTER        &kp ESC
-&kp LG(K)      &sk RIGHT_SHIFT  &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                                                  &kp RG(X)   &kp BACKSPACE  &kp RG(Z)       &kp RG(RS(Z))  &sk RIGHT_SHIFT  &kp RG(K)
-&kp LG(L)      &kp LCTRL        &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                                                  &kp RG(C)   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT        &kp RG(L)
-&kp LG(J)      &kp LG(A)        &select_line   &select_word  &kp LG(F)      &kp LG(V)           &kp LS(LA(LG(V)))  &kp LC(TAB)  &to 0        &select_none  &extend_line  &extend_word  &kp RG(V)   &kp RG(F)      &kp RG(RS(G))   &kp RG(G)      &kp LA(RG(F))    &kp RG(J)
-&kp LA(LG(F))  &kp LG(LS(G))    &extend_line   &extend_word  &kp LG(G)                          &none              &kp LG(TAB)  &kp LA(TAB)  &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN   &kp PG_UP      &kp END          &kp RC(RG(SPACE))
+&none           &none            &none          &none         &none                                                                                                                                 &none          &none            &none          &none            &none
+&kp ESC         &kp ENTER        &kp SPACE      &kp TAB       &kp DELETE     &kp LG(LA(LC(N5)))                                                                                         &kp INSERT  &kp DELETE     &kp TAB          &kp SPACE      &kp ENTER        &kp ESC
+&kp CAPSLOCK    &sk RIGHT_SHIFT  &kp LG(LS(Z))  &kp LG(Z)     &kp BACKSPACE  &kp LG(X)                                                                                                  &kp RG(X)   &kp BACKSPACE  &kp RG(Z)        &kp RG(RS(Z))  &sk RIGHT_SHIFT  &kp RG(K)
+&sk LEFT_SHIFT  &kp LCTRL        &kp LALT       &kp LGUI      &kp LSHFT      &kp LG(C)                                                                                                  &kp LEFT    &kp DOWN       &kp UP_ARROW     &kp RIGHT      &none            &kp RG(L)
+&kp LG(J)       &kp LG(A)        &select_line   &select_word  &kp LG(F)      &kp LG(V)           &kp LS(LA(LG(V)))  &kp LC(TAB)  &to 0        &select_none  &extend_line  &extend_word  &kp HOME    &kp PAGE_DOWN  &kp RG(PAGE_UP)  &kp END        &kp LA(RG(F))    &kp RG(J)
+&kp LA(LG(F))   &kp LG(LS(G))    &extend_line   &extend_word  &kp LG(G)                          &none              &kp LG(TAB)  &kp LA(TAB)  &kp RG(A)     &select_line  &select_word              &kp HOME       &kp PAGE_DOWN    &kp PG_UP      &kp END          &kp RC(RG(SPACE))
             >;
         };
 
