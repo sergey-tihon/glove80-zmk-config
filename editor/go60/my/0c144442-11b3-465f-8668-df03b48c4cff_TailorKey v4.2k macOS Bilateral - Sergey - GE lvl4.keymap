@@ -1487,7 +1487,7 @@
         // Ctrl Tab Switcher (Cursor Layer) - TailorKey
         combo_tabswitch_ctrl_v1_TKZ {
             key-positions = <POS_LH_C2R5 POS_LH_C2R4>;
-            bindings = <&mod_tab_chord_v2_TKZ LGUI LAYER_Cursor>;
+            bindings = <&mod_tab_chord_v2_TKZ LCTRL LAYER_Cursor>;
             layers = <LAYER_HRM_macOS LAYER_Typing LAYER_Autoshift>;
         };
     };
